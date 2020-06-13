@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     operatorIsTapped(OPERATOR.SUBTRACT);
                     break;
                 case R.id.btnReset:
+                    clearTapped();
                     break;
                 case R.id.btn0:
                     numberIsTapped(0);
@@ -164,6 +165,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 stringNumberAtLeft = String.valueOf(calculationsResult);
                 txtResults.setText(stringNumberAtLeft);
                 calculationsString = stringNumberAtLeft;
+                txtCalculations.setText(calculationsString);
+
 
             }
         }else {
@@ -175,5 +178,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         currentOperator = tappedOperator;
 
+    }
+
+    public void clearTapped(){
+
+        stringNumberAtLeft = "";
+        stringNumberAtRight = "";
+        txtResults.setText("0");
+        txtCalculations.setText("0");
+        currentOperator = null;
+        calculationsString = "";
+        calculationsResult = 0;
     }
 }
