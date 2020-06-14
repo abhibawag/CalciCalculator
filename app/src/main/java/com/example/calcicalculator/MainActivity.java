@@ -189,5 +189,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         currentOperator = null;
         calculationsString = "";
         calculationsResult = 0;
+        currentNumber = "";
     }
 }
